@@ -1,0 +1,17 @@
+<template>
+    <template for:each={wiredOppsResult} for:item="it">
+        <div key={it.Id} class="slds-box slds-m-vertical_x-small">
+            <p>Name: <strong>{it.Name}</strong></p>
+            <p>Amount: <strong>{it.Amount}</strong></p>
+            <p>Probability: <strong>{it.Probability}</strong></p>
+            <p> Expected_Revenue_Overridden: <strong>{it.Expected_Revenue_Overridden__c}</strong></p>
+            <lightning-button
+                label="Set Expected Revenue"
+                variant="variant_type"
+                data-id={it.Id}
+                onclick={handleProcessRevenue}>
+        </lightning-button>
+        </div>
+    </template>
+
+</template>
